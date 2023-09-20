@@ -1,4 +1,8 @@
-.pokemons {
+#returnButton {
+    display: none;
+}
+
+.pokemons, #pokemon-detail{
     display: grid;
     grid-template-columns: 1fr;
     margin: 0;
@@ -18,7 +22,7 @@
     background-color: #ee7f30;
 }
 
-.water {
+.water, #water {
     background-color: #678fee;
 }
 
@@ -78,7 +82,7 @@
     background-color: #f9aec7;
 }
 
-.pokemon {
+.pokemon, #pokemon-detail {
     display: flex;
     flex-direction: column;
     margin: .5rem;
@@ -122,7 +126,7 @@
     text-align: center;
 }
 
-.pokemon .detail img {
+.pokemon .detail img{
     max-width: 100%;
     height: 70px;
 }
@@ -133,18 +137,60 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 1rem;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent; /* Defina a cor de fundo desejada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Para garantir que esteja acima de outros elementos */
 }
 
 .pagination button {
-    padding: .25rem .5rem;
+    padding: .35rem .5rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: .925rem;
     color: #fff;
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
 }
+
+.pokemon-detail, #pokemon-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    /* background-color: #fff; */
+    margin: 1rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-detail h2 {
+    text-transform: capitalize;
+    color: #000;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.pokemon-detail p {
+    color: #000;
+    opacity: 0.3;
+    font-size: 0.625rem;
+    text-align: center;
+}
+
+.pokemon-detail img, #pokemon-detail {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+
 
 @media screen and (min-width: 380px) {
     .pokemons {
